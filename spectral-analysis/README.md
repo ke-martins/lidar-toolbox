@@ -16,28 +16,6 @@ kevin.martins@cnrs.fr
 ## List of functions
 
 <details>
-  <summary>📄 fun_compute_cross_spectrum_mat.m</summary>  
-  <br>  
-
-  **Description**:  
-  Estimation of cross-spectrum [m^2/Hz] using a direct fft-based approach.  
-  The function is written for data organised by blocks in a matrix, which can be handy to accomodate for gappy series (e.g., lidar-derived). The first dimension of this matrix corresponds to the nfft, i.e. the length of our timeseries block. Overlapping (if any) thus has already been taken care of, and the input 'overlap' is only used to compute the corresponding equivalent dof more precisely.  
-
-  **Inputs**:  
-
-  | Name      | Type   | Description                                                      |
-  |-----------|--------|------------------------------------------------------------------|
-  | `x`       | double | first detrended free surface elevation signal [m], organised in a matrix of dimensions nfft x number of blocks |  
-  | `y`       | double | second detrended free surface elevation signal [m], organised in a matrix of dimensions nfft x number of blocks |  
-  | `sf`      | int    | Sampling frequency [Hz]                                         |  
-  | `wind`    | char   | Type of window for tapering ('rectangular', 'hann', or 'kaiser') |
-
-  **Outputs**:  
-  &nbsp;&nbsp;Returns `data`, a self-explanatory MATLAB data structure containing spectral products.
-
-</details>
-
-<details>
   <summary>📄 fun_compute_spectrum_mat.m</summary>  
   <br>  
 
@@ -52,6 +30,28 @@ kevin.martins@cnrs.fr
   | `x`       | double | Detrended free surface elevation signal [m], organised in a matrix of dimensions nfft x number of blocks |  
   | `fs`      | int    | Sampling frequency [Hz]                                         |  
   | `overlap` | int    | Percentage overlap                                             |
+  | `wind`    | char   | Type of window for tapering ('rectangular', 'hann', or 'kaiser') |
+
+  **Outputs**:  
+  &nbsp;&nbsp;Returns `data`, a self-explanatory MATLAB data structure containing spectral products.
+
+</details>
+
+<details>
+  <summary>📄 fun_compute_cross_spectrum_mat.m</summary>  
+  <br>  
+
+  **Description**:  
+  Estimation of cross-spectrum [m^2/Hz] using a direct fft-based approach.  
+  The function is written for data organised by blocks in a matrix, which can be handy to accomodate for gappy series (e.g., lidar-derived). The first dimension of this matrix corresponds to the nfft, i.e. the length of our timeseries block. Overlapping (if any) thus has already been taken care of, and the input 'overlap' is only used to compute the corresponding equivalent dof more precisely.  
+
+  **Inputs**:  
+
+  | Name      | Type   | Description                                                      |
+  |-----------|--------|------------------------------------------------------------------|
+  | `x`       | double | first detrended free surface elevation signal [m], organised in a matrix of dimensions nfft x number of blocks |  
+  | `y`       | double | second detrended free surface elevation signal [m], organised in a matrix of dimensions nfft x number of blocks |  
+  | `sf`      | int    | Sampling frequency [Hz]                                         |  
   | `wind`    | char   | Type of window for tapering ('rectangular', 'hann', or 'kaiser') |
 
   **Outputs**:  

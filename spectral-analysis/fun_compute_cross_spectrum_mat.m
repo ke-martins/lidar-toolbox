@@ -1,4 +1,4 @@
-function [ data ] = fun_compute_cross_spectrum_mat( x , y , fs , wind )
+function [ data ] = fun_compute_cross_spectrum_mat( x , y , sf , wind )
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Estimation of cross-spectrum [m^2/Hz] using a direct fft-based approach.
 % The function is written for data provided in matrix (already organised).
@@ -7,7 +7,7 @@ function [ data ] = fun_compute_cross_spectrum_mat( x , y , fs , wind )
 % Inputs:
 %  x       - first signal  (organised in matrix length(timeseries),nb_block))
 %  y       - second signal (organised in matrix length(timeseries),nb_block))
-%  fs      - sampling frequency
+%  sf      - sampling frequency
 %  wind    - Type of window for tappering ('rectangular', 'hann' or 'kaiser')
 %
 % Outputs: 
@@ -35,7 +35,7 @@ function [ data ] = fun_compute_cross_spectrum_mat( x , y , fs , wind )
     y    = y(1:end-1,:);
     nfft = nfft-1;
   end
-  freqs = [-nfft/2:nfft/2]'/nfft*fs;
+  freqs = [-nfft/2:nfft/2]'/nfft*sf;
 
   % Output fields
   data.info      = 'Energy density spectra';
