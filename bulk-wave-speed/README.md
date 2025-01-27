@@ -1,6 +1,6 @@
 # lidar-toolbox: a MATLAB set of libraries to handle nearshore wave data collected with lidars
 
-This is part of "lidar-toolbox": a MATLAB set of libraries to handle nearshore wave data collected with lidars. This sub-directory contains only one function that computes the mean wave propagation speed from two free surface elevation signals.
+This is part of **lidar-toolbox**: a MATLAB set of libraries to handle nearshore wave data collected with lidars. This sub-directory **bulk-wave-speed** contains only one function that computes the mean wave propagation speed from two free surface elevation signals.
 
 <strong>Latest updates:</strong>  
 <sub><sup>:arrow_forward:</sup></sub> *(Jan. 2025)*
