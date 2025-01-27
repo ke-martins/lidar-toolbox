@@ -16,7 +16,7 @@ kevin.martins@cnrs.fr
 ## List of directories/sub libraries
 
 <details>
-  <summary>📂 <strong>lidar-gridding<strong> </summary>  
+  <summary>📂 <strong>lidar-gridding</strong> </summary>  
   <br>  
 
   **Description**:  
@@ -31,7 +31,7 @@ kevin.martins@cnrs.fr
 </details>
 
 <details>
-  <summary>📂 <strong>gappy-series-preprocessing<strong> </summary>  
+  <summary>📂 <strong>gappy-series-preprocessing</strong> </summary>  
   <br>  
 
   **Description**:  
@@ -47,7 +47,7 @@ kevin.martins@cnrs.fr
 </details>
 
 <details>
-  <summary>📂 <strong>spectral-analysis<strong> </summary>  
+  <summary>📂 <strong>spectral-analysis</strong> </summary>  
   <br>  
 
   **Description**:  
@@ -66,7 +66,7 @@ kevin.martins@cnrs.fr
 </details>
 
 <details>
-  <summary>📂 <strong>bulk-wave-speed<strong> </summary>  
+  <summary>📂 <strong>bulk-wave-speed</strong> </summary>  
   <br>  
 
   **Description**:  
