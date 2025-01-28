@@ -33,8 +33,8 @@ time = [ datenum(2022,9,12,19,0,0) : 1/(sf*24*3600) : datenum(2022,9,12,19,30,0)
 update = false;
 
 % Gridding data
-infilename  = '../examples/data/BELS_20220912_191123_flight_1_x=225.preprocessed.mat';
-outfilename = ['../examples/data/BELS_20220912_1900_flight_1_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s.mat'];
+infilename  = 'data/BELS_20220912_191123_flight_1_x=225.preprocessed.mat';
+outfilename = ['data/BELS_20220912_1900_flight_1_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s.mat'];
 if ~isfile(outfilename) || update
   % Loading data
   raw_data = load( infilename );
@@ -62,7 +62,7 @@ clear infilename outfilename update x_win y_win t_win dx sf x_grid time
 
 %% 2 - retrieving survey data along this transect
 % Dealing with survey
-survey = load('../examples/data/BELS_FRF_crawler+crab_survey_20220912_NAVD88.mat');
+survey = load('data/BELS_FRF_crawler+crab_survey_20220912_NAVD88.mat');
 
 % Dealing with survey and water depth
 interFunction = scatteredInterpolant([survey.x,survey.x]',[survey.y(1,:),survey.y(2,:)]',[survey.z(1,:),survey.z(2,:)]','linear','none');
