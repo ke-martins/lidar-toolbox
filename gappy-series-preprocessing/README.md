@@ -1,4 +1,4 @@
-# lidar-toolbox: a MATLAB set of libraries to handle nearshore wave data collected with lidars
+# lidar-toolbox: a MATLAB set of libraries to handle nearshore wave data collected with lidars 🌊
 
 This is part of **lidar-toolbox**: a MATLAB set of libraries to handle nearshore wave data collected with lidars. This sub-directory **gappy-series-preprocessing** gather useful functions for pre-processing gappy series of data so that spectral, cross-spectral and bispectral analyses can be applied to them (compatible with spectral-analysis library). This set of functions was initially created for working with ocean waves free surface elevation gappy signals obtained with lidars.  
 

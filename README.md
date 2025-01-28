@@ -4,7 +4,7 @@ Welcome to this short description of **lidar-toolbox**: a MATLAB set of librarie
 
 <strong>Latest updates:</strong>  
 <sub><sup>:arrow_forward:</sup></sub> *(Jan. 2025)*
-lidar-toolbox v1: first release of the library.
+lidar-toolbox v1: first release of the library. Fully testedn and examples provided.
 
 <strong>Contact me:</strong>  
 Kévin Martins  
