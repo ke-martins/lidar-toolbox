@@ -51,12 +51,19 @@ function [ grid_data ] = fun_multibeam_lidar_gridding( time , x_grid , y_grid , 
   itstart = find( grid_data.time > first_step , 1 , 'first' );
   itend   = find( grid_data.time < last_step , 1 , 'last' );
 
+  % Making sure time indices are sorted; this will speed up algorithm
+  if ~issorted(raw_data.time)
+    [raw_data.time,isorted] = sort(raw_data.time);
+    raw_data.xyz = raw_data.xyz(isorted,:);
+  end
+
   % Main loop
   for tt = itstart:itend
     disp(['Number of timesteps left : ',num2str(length(grid_data.time)-tt)])
     % Looking for points within the correct time domain (typically a few lidar scans, imposed through "t_win")
     % Scarcity of points in the spatial domain is handled at a later stage, just before the interpolation is made
-    iloc_t = find( abs(grid_data.time(tt) - raw_data.time ) <= t_win/24/3600 );
+%     iloc_t = find( abs(grid_data.time(tt) - raw_data.time ) <= t_win/24/3600 ); %original, much slower than by searching manually in sorted array, see below
+    iloc_t = BinaryIntervalSearch(raw_data.time,grid_data.time(tt),t_win/24/3600)'; % taken from File-exchange
 
     % Interpolation, main part
     % Entering only when we have sufficient spatio-temporal data. Quality criteria hard-coded for now.
