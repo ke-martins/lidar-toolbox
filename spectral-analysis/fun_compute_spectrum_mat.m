@@ -1,4 +1,4 @@
-function [ data ] = fun_compute_spectrum_mat( x , fs , overlap , wind )
+function [ data ] = fun_compute_spectrum_mat( x , sf , overlap , wind )
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Direct FFT-based estimation of surface elevation spectral densities [m^2/Hz].
 % The function is written for data organised by blocks in a matrix, 
@@ -9,7 +9,7 @@ function [ data ] = fun_compute_spectrum_mat( x , fs , overlap , wind )
 %
 % Inputs:
 %   x       - Detrended free surface elevation signal [m], organised in a matrix of dimensions nfft x nb_block
-%   fs      - sampling frequency [Hz]
+%   sf      - sampling frequency [Hz]
 %   overlap - percentage overlap, used only to compute edof
 %   wind    - Type of window for tappering ('rectangular', 'hann' or 'kaiser')
 %
@@ -39,7 +39,7 @@ function [ data ] = fun_compute_spectrum_mat( x , fs , overlap , wind )
     x    = x(1:end-1,:);
     nfft = nfft-1;
   end
-  freqs = [-nfft/2:nfft/2]'/nfft*fs;
+  freqs = [-nfft/2:nfft/2]'/nfft*sf;
 
   % Output fields
   data.info    = 'Energy density spectra';
