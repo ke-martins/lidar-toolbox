@@ -6,7 +6,7 @@ At the moment, there are 4 inter-dependent sub-libraries, each dedicated to spec
 
 <strong>Latest updates:</strong>  
 <sub><sup>:arrow_forward:</sup></sub> *(Jan. 2025)*
-lidar-toolbox v1: first release of the library. Fully testedn and examples provided.
+lidar-toolbox v1: first release of the library. Fully tested and examples provided.
 
 <strong>Contact me:</strong>  
 Kévin Martins  
