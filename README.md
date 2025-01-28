@@ -1,6 +1,8 @@
 # lidar-toolbox: a MATLAB set of libraries to handle nearshore wave data collected with lidars 🌊
 
-Welcome to this short description of **lidar-toolbox**: a MATLAB set of libraries to handle nearshore wave data collected with lidar scanners. The two main features are the libraries for gridding multibeam lidar (**lidar-gridding**) and performing spectral, cross-spectral and bispectral analysis (**spectral-analysis**). In essence, the **spectral-analysis** library is an adaptation of my **bispectral-analysis** library to gappy data collected by multibeam lidar scanners (https://github.com/ke-martins/bispectral-analysis). This adaptation was motivated while developing the nonlinear, lidar-based, nearshore depth inversion algorithm and working on the manuscript submitted to *CENG* (Martins et al., submitted). A list of other relevant publications that used this toolbox is given at the bottom of this page. Although this toolbox was intended for surface elevation datasets, it can be used for other signals bearing in mind the provided units would be wrong. At the moment, there are 4 inter-dependent sub-libraries, each dedicated to specific functions described below, but this is expected to grow in the future, and include libraries for data acquisition for instance.  
+Welcome to this short description of **lidar-toolbox**: a MATLAB set of libraries to handle nearshore wave data collected with lidar scanners. The two main features are the libraries for gridding multibeam lidar (**lidar-gridding**) and performing spectral, cross-spectral and bispectral analysis (**spectral-analysis**). In essence, the **spectral-analysis** library is an adaptation of my **bispectral-analysis** library to gappy data collected by multibeam lidar scanners (https://github.com/ke-martins/bispectral-analysis). This adaptation was motivated while developing the nonlinear, lidar-based, nearshore depth inversion algorithm and working on the manuscript submitted to *CENG* (Martins et al., submitted).  
+
+At the moment, there are 4 inter-dependent sub-libraries, each dedicated to specific functions described below, but this is expected to grow in the future, and include libraries for data acquisition for instance. In the examples folder, there several example scripts to grid multibeam lidar data and perform spectral analysis on such gridded data. Additionally, a complete workflow example of the implementation of the Boussinesq-based neashore depth inversion method of Martins et al. (2023) to field lidar datasets is presented. This example is released as a accompanying code for the manuscript submitted to *CENG* (Martins et al., see references list).  
 
 <strong>Latest updates:</strong>  
 <sub><sup>:arrow_forward:</sup></sub> *(Jan. 2025)*
@@ -62,19 +64,6 @@ kevin.martins@cnrs.fr
   fun_compute_krms_terms.m  
   fun_compute_Snl.m  
   fun_compute_edof.m  
-
-</details>
-
-<details>
-  <summary>📂 <strong>lidBathy</strong> </summary>  
-  <br>  
-
-  **Description**:  
-  Implementation of the Boussinesq-based neashore depth inversion method of Martins et al. (2023) to field lidar datasets. This workflow example relies on the libraries **lidar-gridding**, **gappy-series-preprocessing** and **spectral-analysis**. 
-
-  **List of files**:  
-
-  workflow_example.m  
 
 </details>
 
