@@ -66,6 +66,19 @@ kevin.martins@cnrs.fr
 </details>
 
 <details>
+  <summary>📂 <strong>lidBathy</strong> </summary>  
+  <br>  
+
+  **Description**:  
+  Implementation of the Boussinesq-based neashore depth inversion method of Martins et al. (2023) to field lidar datasets. This workflow example relies on the libraries **lidar-gridding**, **gappy-series-preprocessing** and **spectral-analysis**. 
+
+  **List of files**:  
+
+  workflow_example.m  
+
+</details>
+
+<details>
   <summary>📂 <strong>bulk-wave-speed</strong> </summary>  
   <br>  
 
