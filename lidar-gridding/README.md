@@ -1,10 +1,10 @@
-# lidar-toolbox: a MATLAB set of libraries to handle nearshore wave data collected with lidars
+# lidar-toolbox: a MATLAB set of libraries to handle nearshore wave data collected with lidars 🌊
 
-This is part of **lidar-toolbox**: a MATLAB set of libraries to handle nearshore wave data collected with lidars. This sub-directory **lidar-gridding** contains functions that grid (spatial and temporal interpolations) data collected by single- or multibeam lidar scanners. It is based on the function built function `scatteredInterpolant` (Delaunay triangulation) and makes the most of 4D (t,x,y,z) point clouds to interpolate raw data on grids and respect some quality criteria.
+This is part of **lidar-toolbox**: a MATLAB set of libraries to handle nearshore wave data collected with lidars. This sub-directory **lidar-gridding** contains functions that grid (spatial and temporal interpolations) data collected by single- or multibeam lidar scanners. It is based on the function built function `scatteredInterpolant` (Delaunay triangulation) and makes the most of 4D (t,x,y,z) point clouds to interpolate raw data on grids and respect some quality criteria. The seeding to the `scatteredInterpolant` is made through a binary search of time intervals, which significantly sped up the process (dependency added from MATLAB File Exchange, License file added from the author).
 
 <strong>Latest updates:</strong>  
 <sub><sup>:arrow_forward:</sup></sub> *(Jan. 2025)*
-lidar-gridding v1: first release of the library; example to be added separately, while reseasing entire lidBathy workflow.
+lidar-gridding v1: first release of the library; example to be added separately, while releasing entire lidBathy workflow.
 
 <strong>Contact me:</strong>  
 Kévin Martins  
