@@ -4,13 +4,14 @@ This is part of **lidar-toolbox**: a MATLAB set of libraries to handle nearshore
 
 ### Prerequisite: pre-processed lidar data file for SIO flight #2 of BELS2022 experiments  
 Please make sure you download the pre-processed lidar data file before running example. It is pretty heavy, and hosted elsewhere as github do not easily accommodate for files this big. Two options are proposed below.  
-<sub><sup>1️⃣</sup></sub> Manual download  
-Download the file at the following link; and place it into `data/` directory: [Download 20220912_191123_flight_2_x=225.mat](https://drive.google.com/uc?id=13Qk01nyErT1LT-RtmG7dNQtoTl9gqpHI) 📄
-<sub><sup>2️⃣</sup></sub> Directly through the MATLAB code provided and the `gdown` command  
+&nbsp;&nbsp;<sub><sup>1️⃣</sup></sub> Manual download  
+Download the file at the following link; and place it into `data/` directory: [20220912_191123_flight_2_x=225.mat](https://drive.google.com/uc?id=13Qk01nyErT1LT-RtmG7dNQtoTl9gqpHI) 📄  
+&nbsp;&nbsp;<sub><sup>2️⃣</sup></sub> Directly through the MATLAB code provided and the `gdown` command  
 Please use option 1 is you do not wish to install the `gdown` command, though it is a super light utility. The MATLAB code will install the gdown command if needed, and download directly the file through the following command (Unix systems only for now):    
 ```bash
 pip install gdown
 gdown https://drive.google.com/uc?id=13Qk01nyErT1LT-RtmG7dNQtoTl9gqpHI
+mv 20220912_191123_flight_2_x=225.mat data/
 ```
 
 <strong>Latest updates:</strong>  
