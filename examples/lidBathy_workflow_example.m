@@ -1,5 +1,5 @@
 % Workflow example for the processing and preparation of lidar data prior to Boussinesq-based depth inversion
-% This is flight number #1 on the 12 September 2022; lidar: Velodyne VLP32C, hovering position at x = 225 m
+% This is flight number #2 on the 12 September 2022 (1900-1930); lidar: Velodyne VLP32C, hovering position at x = 225 m
 % This script comes as a supporting material for the paper:
 % Seamless nearshore topo-bathymetry reconstruction from lidar scanners: a Proof-of-Concept based on a dedicated field experiment at Duck, NC
 % by Martins Kévin, K.L. Brodie, J.W. Fiedler, A.M. O'Dea, N.J. Spore, R.L. Grenzeback, P.J. Dickhudt, S. Bak, O. de Viron and P. Bonneton 

@@ -1,5 +1,5 @@
 % Workflow example for the gridding of multibeam lidar data. We start from a "pre-processed" (raw data, but organised such that it is read by the gridding function).
-% The data originates from the BELS2022 experiments and corresponds to flight number #1 on the 12 September 2022; lidar: Velodyne VLP32C, hovering position at x = 225 m.
+% The data originates from the BELS2022 experiments and corresponds to flight number #2 on the 12 September 2022 (1900-1930); lidar: Velodyne VLP32C, hovering position at x = 225 m.
 % This script was prepared while working towards the paper:
 % Seamless nearshore topo-bathymetry reconstruction from lidar scanners: a Proof-of-Concept based on a dedicated field experiment at Duck, NC
 % by Martins Kévin, K.L. Brodie, J.W. Fiedler, A.M. O'Dea, N.J. Spore, R.L. Grenzeback, P.J. Dickhudt, S. Bak, O. de Viron and P. Bonneton 
