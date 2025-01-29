@@ -31,9 +31,18 @@ time = [ datenum(2022,9,12,19,0,0) : 1/(sf*24*3600) : datenum(2022,9,12,19,30,0)
 % Dealing with existing files: do we want to re-update every pre-processed files?
 update = false;
 
+% Making sure we have the pre-processed data upon which the example is based
+infilename = 'data/BELS_20220912_191123_flight_2_x=225.preprocessed.mat';
+if and(~isfile(infilename),isunix) 
+  disp('pre-processed file not found, downloading now...');
+  system('pip install gdown && gdown https://drive.google.com/uc?id=13Qk01nyErT1LT-RtmG7dNQtoTl9gqpHI')
+  system('mv 20220912_191123_flight_2_x=225.mat data/')
+else
+  error('pre-processed file not found, please download manually at: https://drive.google.com/uc?id=13Qk01nyErT1LT-RtmG7dNQtoTl9gqpHI');
+end
+
 % Gridding data
-infilename  = 'data/BELS_20220912_191123_flight_1_x=225.preprocessed.mat';
-outfilename = ['data/BELS_20220912_1900_flight_1_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s.mat'];
+outfilename = ['data/BELS_20220912_1900_flight_2_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s.mat'];
 if ~isfile(outfilename) || update
   % Loading data
   raw_data = load( infilename );
@@ -77,8 +86,8 @@ time = [ datenum(2022,9,12,19,0,0) : 1/(sf*24*3600) : datenum(2022,9,12,19,30,0)
 update = false;
 
 % Gridding data
-infilename  = 'data/BELS_20220912_191123_flight_1_x=225.preprocessed.mat';
-outfilename = ['data/BELS_20220912_1900_flight_1_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s_noYdep.mat'];
+infilename  = 'data/BELS_20220912_191123_flight_2_x=225.preprocessed.mat';
+outfilename = ['data/BELS_20220912_1900_flight_2_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s_noYdep.mat'];
 if ~isfile(outfilename) || update
   % Loading data
   raw_data = load( infilename );
@@ -104,9 +113,9 @@ fun_gridded_lidar_diagnostics( grid_data_2.sf , grid_data_2.x , grid_data_2.z , 
 %% Comparison
 % Re loading data files in case you haven't executed the code above
 dx = 0.2; sf = 2; t_win = 0.16; 
-outfilename = ['data/BELS_20220912_1900_flight_1_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s.mat'];
+outfilename = ['data/BELS_20220912_1900_flight_2_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s.mat'];
 grid_data_1 = load(outfilename);
-outfilename = ['data/BELS_20220912_1900_flight_1_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s_noYdep.mat'];
+outfilename = ['data/BELS_20220912_1900_flight_2_x=225.dx=',num2str(dx),'m_',num2str(sf),'Hz_twin=',num2str(t_win),'s_noYdep.mat'];
 grid_data_2 = load(outfilename);
 
 % x = 220 m

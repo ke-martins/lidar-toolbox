@@ -16,7 +16,7 @@ addpath(genpath('../'))
 
 %% 1 - Spectral and bispectral analysis
 % Re loading data files in case you haven't executed the code above
-outfilename = 'data/BELS_20220912_1900_flight_1_x=225.dx=0.2m_2Hz_twin=0.16s.mat';
+outfilename = 'data/BELS_20220912_1900_flight_2_x=225.dx=0.2m_2Hz_twin=0.16s.mat';
 grid_data   = load(outfilename);
 
 % Dealing with survey
