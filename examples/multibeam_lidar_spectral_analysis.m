@@ -1,7 +1,9 @@
 % Workflow example for the spectral analysis of gridded multibeam lidar data. 
 % We start from gridded dataset, prepared in the "multibeam_lidar_gridding.m" file.
-% The data originates from the BELS2022 experiments and corresponds to flight number #2 on the 12 September 2022 (1900-1930); lidar: Velodyne VLP32C, hovering position at x = 225 m.
-% This script was prepared while working towards the paper:
+% The data originates from the BELS2022 flight number #1 (1900-1930 on 12 September 2022) as described in the companion paper. 
+% Note that in the raw data organisation, this is the second flight performed during that day (no data collection during flight #1), which explains the file names hereafter. The lidar corresponds to the SIO UAS Velodyne VLP32C, hovering position at x = 225 m.
+%
+% Reference:
 % Seamless nearshore topo-bathymetry reconstruction from lidar scanners: a Proof-of-Concept based on a dedicated field experiment at Duck, NC
 % by Martins Kévin, K.L. Brodie, J.W. Fiedler, A.M. O'Dea, N.J. Spore, R.L. Grenzeback, P.J. Dickhudt, S. Bak, O. de Viron and P. Bonneton 
 % submitted to Coastal Engineering
