@@ -2,20 +2,17 @@
 
 This is part of **lidar-toolbox**: a MATLAB set of libraries to handle nearshore wave data collected with lidars. This sub-directory contains several examples to handle lidar data, including a complete workflow example for the implementation of the non-linear depth inversion algorithm of Martins et al. (2023) on field lidar data. It relies on most libraries within **lidar-toolbox** to grid the raw multibeam lidar data (**lidar-gridding**), and perform spectral, cross-spectral and bispectral analyses of gappy free surface elevation timeseries (**gappy-series-preprocessing** and **spectral-analysis**). This example accompanies the manuscript describing this lidar implementation of *lidBathy* and submitted to *CENG* (Martins et al., submitted). A list of other relevant publications that used this toolbox is given at the bottom of this page.  
 
-## 📥 Please download the pre-processed file before running example
+Please make sure you download the pre-processed lidar data file before running example. It is pretty heavy, and hosted elsewhere as github do not easily accommodate for files this big. Two options are proposed below.
 
-### **<sub><sup>1️⃣</sup></sub> Manual Download**
-Follow the link below, download the required file and place it into data/ directory:  
-- [Download 20220912_191123_flight_2_x=225.mat](https://drive.google.com/uc?id=13Qk01nyErT1LT-RtmG7dNQtoTl9gqpHI) 📄
+### **<sub><sup>1️⃣</sup></sub> Manual download** 
+Download the file at the following link; and place it into `data/` directory: [Download 20220912_191123_flight_2_x=225.mat](https://drive.google.com/uc?id=13Qk01nyErT1LT-RtmG7dNQtoTl9gqpHI) 📄
 
----
-
-### **<sub><sup>2️⃣</sup></sub> Directly through the MATLAB code provided and the `gdown`**
-The MATLAB code will install the gdown command if needed, and download directly the file (Unix systems only). Please use option 1 is you do not wish to install the gdown command.  
-#### **Using `curl`**
+### **<sub><sup>2️⃣</sup></sub> Directly through the MATLAB code provided and the `gdown` command**
+Please use option 1 is you do not wish to install the gdown command, though it is a super light utility. The MATLAB code will install the gdown command if needed, and download directly the file through the following command (Unix systems only for now):    
 ```bash
 pip install gdown
 gdown https://drive.google.com/uc?id=13Qk01nyErT1LT-RtmG7dNQtoTl9gqpHI
+```
 
 <strong>Latest updates:</strong>  
 <sub><sup>:arrow_forward:</sup></sub> *(Jan. 2025)*
